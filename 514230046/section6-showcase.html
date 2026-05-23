@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 6 — 成果展示</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #1e1b4b;
+        color: #e0e7ff;
+        min-height: 100vh;
+        padding: 36px;
+      }
+
+      .hd {
+        margin-bottom: 28px;
+      }
+      .hd h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .hd p {
+        font-size: 0.85rem;
+        color: #a5b4fc;
+        margin-top: 4px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+      .card {
+        background: #312e81;
+        border: 1px solid #3730a3;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .card.main {
+        grid-column: span 2;
+      }
+      .thumb {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #6366f1;
+        border-bottom: 1px solid #3730a3;
+        font-weight: 700;
+      }
+      .t1 {
+        background: linear-gradient(135deg, #1e1b4b, #312e81);
+      }
+      .t2 {
+        background: linear-gradient(135deg, #1e1b4b, #1e3a5f);
+      }
+      .t3 {
+        background: linear-gradient(135deg, #2d1b4b, #3730a3);
+      }
+      .t4 {
+        background: linear-gradient(135deg, #1b2d4b, #1e3a5f);
+      }
+      .t5 {
+        background: linear-gradient(135deg, #2d1b3b, #3730a3);
+      }
+      .body {
+        padding: 14px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.68rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin-bottom: 7px;
+        border: 1px solid;
+      }
+      .t-ai {
+        color: #818cf8;
+        border-color: rgba(99, 102, 241, 0.4);
+        background: rgba(99, 102, 241, 0.1);
+      }
+      .t-data {
+        color: #7dd3fc;
+        border-color: rgba(56, 189, 248, 0.3);
+        background: rgba(56, 189, 248, 0.08);
+      }
+      .t-viz {
+        color: #f0abfc;
+        border-color: rgba(232, 121, 249, 0.3);
+        background: rgba(232, 121, 249, 0.08);
+      }
+      .t-ml {
+        color: #fde68a;
+        border-color: rgba(251, 191, 36, 0.3);
+        background: rgba(251, 191, 36, 0.08);
+      }
+      .body h3 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #e0e7ff;
+        margin-bottom: 5px;
+      }
+      .body p {
+        font-size: 0.78rem;
+        color: #a5b4fc;
+        line-height: 1.55;
+      }
+      .meta {
+        margin-top: 8px;
+        font-size: 0.72rem;
+        color: #6366f1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="hd">
+      <h1>我們做了什麼</h1>
+      <p>簡單展示的成果</p>
+    </div>
+
+    <div class="grid">
+      <div class="card main">
+        <div class="thumb t1">主要專案 · 零售銷售預測系統</div>
+        <div class="body">
+          <span class="tag t-ai">AI 決策</span>
+          <h3>零售銷售預測系統</h3>
+          <p>
+            串接 POS 歷史資料，用 LSTM 預測未來 30
+            天各品類銷售量。協助採購決策，庫存浪費減少 32%。
+          </p>
+          <div class="meta">
+            2026.05 · LSTM · Python · Streamlit · 準確率 92%
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb t2">客戶流失預警</div>
+        <div class="body">
+          <span class="tag t-data">資料分析</span>
+          <h3>客戶流失預警</h3>
+          <p>XGBoost 找出高風險客戶，搭配儀表板即時推播預警，召回率 88%。</p>
+          <div class="meta">XGBoost · Plotly</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb t3">社群輿情地圖</div>
+        <div class="body">
+          <span class="tag t-viz">文字分析</span>
+          <h3>社群輿情地圖</h3>
+          <p>爬 PTT/Dcard，BERT 跑情感分析，詞雲 + 趨勢圖即時更新。</p>
+          <div class="meta">BERT · D3.js</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb t4">供應鏈風險評估</div>
+        <div class="body">
+          <span class="tag t-ml">機器學習</span>
+          <h3>供應鏈風險評估</h3>
+          <p>Random Forest 量化斷鏈風險，可提前 14 天發出預警通知。</p>
+          <div class="meta">Random Forest · Pandas</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb t5">中文自然語言 BI</div>
+        <div class="body">
+          <span class="tag t-ai">NLP</span>
+          <h3>中文自然語言 BI</h3>
+          <p>用中文問問題，自動轉 SQL 查資料庫，結果直接畫圖。</p>
+          <div class="meta">GPT · LangChain · SQL</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

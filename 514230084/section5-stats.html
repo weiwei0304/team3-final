@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 5 — 數據統計</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f0fdf4;
+        color: #14532d;
+        min-height: 100vh;
+        padding: 36px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 28px;
+      }
+      .top h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #166534;
+      }
+      .kpi-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+      .kpi {
+        background: #fff;
+        border: 1px solid #bbf7d0;
+        border-top: 4px solid #22c55e;
+        border-radius: 10px;
+        padding: 20px 16px;
+        text-align: center;
+      }
+      .kpi .val {
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #15803d;
+        line-height: 1;
+      }
+      .kpi .unit {
+        font-size: 0.72rem;
+        color: #86efac;
+        margin-top: 2px;
+      }
+      .kpi .lbl {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #374151;
+        margin-top: 8px;
+      }
+
+      .bars h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #166534;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #bbf7d0;
+      }
+      .bar-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .bar-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+      }
+      .bar-name {
+        font-weight: 600;
+      }
+      .bar-pct {
+        font-weight: 700;
+        color: #15803d;
+      }
+      .bar-track {
+        height: 10px;
+        background: #dcfce7;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .bar-fill {
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #22c55e, #16a34a);
+      }
+      .bar-note {
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-top: 4px;
+      }
+
+      .big-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .big-card {
+        background: #fff;
+        border: 1px solid #bbf7d0;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+      }
+      .big-card .n {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #166534;
+      }
+      .big-card .d {
+        font-size: 0.75rem;
+        color: #4b5563;
+        margin-top: 4px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>系統效能數字</h1>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="val">92%</div>
+        <div class="unit">準確率</div>
+        <div class="lbl">預測準確率</div>
+      </div>
+      <div class="kpi">
+        <div class="val">87%</div>
+        <div class="unit">採納率</div>
+        <div class="lbl">建議採納率</div>
+      </div>
+      <div class="kpi">
+        <div class="val">95%</div>
+        <div class="unit">滿意度</div>
+        <div class="lbl">使用者滿意度</div>
+      </div>
+      <div class="kpi">
+        <div class="val">78%</div>
+        <div class="unit">節省</div>
+        <div class="lbl">決策時間縮短</div>
+      </div>
+    </div>
+
+    <div class="bars">
+      <h2>實際測試與用戶回饋的結果</h2>
+      <div class="bar-list">
+        <div>
+          <div class="bar-meta">
+            <span class="bar-name">預測準確率</span
+            ><span class="bar-pct">92%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width: 92%"></div>
+          </div>
+          <div class="bar-note">
+            標準測試集結果，比業界基準高出約 15 個百分點
+          </div>
+        </div>
+        <div>
+          <div class="bar-meta">
+            <span class="bar-name">建議採納率</span
+            ><span class="bar-pct">87%</span>
+          </div>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              style="
+                width: 87%;
+                background: linear-gradient(90deg, #16a34a, #15803d);
+              "
+            ></div>
+          </div>
+          <div class="bar-note">
+            真實業務場景中，AI 建議被決策者實際執行的比例
+          </div>
+        </div>
+        <div>
+          <div class="bar-meta">
+            <span class="bar-name">使用者滿意度</span
+            ><span class="bar-pct">95%</span>
+          </div>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              style="
+                width: 95%;
+                background: linear-gradient(90deg, #4ade80, #22c55e);
+              "
+            ></div>
+          </div>
+          <div class="bar-note">
+            使用者訪談中表示「介面直覺不需要額外學習」的比例
+          </div>
+        </div>
+        <div>
+          <div class="bar-meta">
+            <span class="bar-name">決策時間縮短</span
+            ><span class="bar-pct">78%</span>
+          </div>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              style="
+                width: 78%;
+                background: linear-gradient(90deg, #86efac, #22c55e);
+              "
+            ></div>
+          </div>
+          <div class="bar-note">
+            導入系統前後的決策流程時間對比，平均縮短 78%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-row">
+      <div class="big-card">
+        <div class="n">120萬+</div>
+        <div class="d">訓練資料筆數</div>
+      </div>
+      <div class="big-card">
+        <div class="n">0.3秒</div>
+        <div class="d">平均推論時間</div>
+      </div>
+      <div class="big-card">
+        <div class="n">99.9%</div>
+        <div class="d">系統可用率</div>
+      </div>
+      <div class="big-card">
+        <div class="n">6</div>
+        <div class="d">整合功能模組</div>
+      </div>
+    </div>
+  </body>
+</html>

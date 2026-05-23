@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team3_final — 智慧決策分析系統</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="stars-wrap" aria-hidden="true">
+      <div class="star-layer"></div>
+      <div class="star-layer"></div>
+      <div class="star-layer"></div>
+    </div>
+    <div class="nebula nebula-a" aria-hidden="true"></div>
+    <div class="nebula nebula-b" aria-hidden="true"></div>
+    <div class="nebula nebula-c" aria-hidden="true"></div>
+
+    <svg width="0" height="0" style="position: absolute; pointer-events: none">
+      <defs>
+        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00e5ff" />
+          <stop offset="100%" stop-color="#9b59f5" />
+        </linearGradient>
+        <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#9b59f5" />
+          <stop offset="100%" stop-color="#f06292" />
+        </linearGradient>
+        <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00e5ff" />
+          <stop offset="100%" stop-color="#f5c842" />
+        </linearGradient>
+        <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f06292" />
+          <stop offset="100%" stop-color="#9b59f5" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!--導航列 -->
+    <nav id="nav">
+      <a href="#hero" class="logo">
+        <div class="logo-mark">
+          <img
+            src="team3.png"
+            style="width: 20px; height: 20px; object-fit: contain"
+          />
+        </div>
+        <span class="logo-name">team3_final</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">關於</a></li>
+        <li><a href="#features">功能</a></li>
+        <li><a href="#stats">指標</a></li>
+        <li><a href="#showcase">成果</a></li>
+        <li><a href="#contact">聯絡</a></li>
+      </ul>
+      <a href="#contact" class="nav-btn">開始 →</a>
+    </nav>
+
+    <!-- Hero 主視覺 -->
+    <section id="hero">
+      <div class="orbit-wrap" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="orbit"></div>
+        <div class="orbit"></div>
+        <div class="core-planet"></div>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          team3 · 期末作業
+        </div>
+        <h1 class="hero-h1">從資料混沌<br />到<em>清晰決策</em></h1>
+        <p class="hero-p">
+          我們用機器學習處理那些人腦難以應付的資料量，<br />
+          讓你在開會前就知道答案在哪裡。
+        </p>
+        <div class="hero-actions">
+          <a href="#features" class="btn-fill">探索功能模組</a>
+          <a href="#showcase" class="btn-ghost">看成果展示</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- 關於系統 -->
+    <section id="about">
+      <div class="wrap">
+        <div class="about-layout">
+          <div class="about-visual" aria-hidden="true">
+            <div class="ring-b">
+              <div class="ring-dot rd-2"></div>
+              <div class="ring-dot rd-3"></div>
+            </div>
+            <div class="ring-a">
+              <div class="ring-dot rd-1"></div>
+            </div>
+            <div class="planet-lg"></div>
+          </div>
+          <div class="about-text">
+            <h2>這個系統<br />在解決什麼問題？</h2>
+            <p>
+              企業每天產生大量資料，但真正能幫助決策的資訊往往埋在裡面找不到。傳統分析太慢，手動報表又容易出錯，等到數字出來，時機可能已經過了。
+            </p>
+            <p>
+              team3_final
+              把資料蒐集、清洗、建模、視覺化整合成一個流程，讓你不需要是資料科學家，也能看懂
+              AI 在說什麼。
+            </p>
+            <div class="chips">
+              <span class="chip chip-c">機器學習</span>
+              <span class="chip chip-p">深度學習</span>
+              <span class="chip chip-k">自然語言處理</span>
+              <span class="chip chip-g">時序預測</span>
+              <span class="chip chip-c">資料視覺化</span>
+              <span class="chip chip-p">決策支援</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features">
+      <div class="wrap">
+        <h2 class="sec-heading">功能模組</h2>
+        <p class="sec-sub">每個模組都可以獨立使用，也可以串成完整流程</p>
+        <div class="feat-grid">
+          <div class="feat-card fade-up">
+            <span class="feat-n">01</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>資料採集</h3>
+            <p>
+              接
+              API、爬蟲、資料庫都行。進來的資料自動格式化，省掉你手動整理的時間。
+            </p>
+          </div>
+          <div class="feat-card fade-up">
+            <span class="feat-n">02</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>AI 決策引擎</h3>
+            <p>
+              模型跑完不是給你一堆數字，而是直接給建議、給信心區間，讓你知道該往哪個方向走。
+            </p>
+          </div>
+          <div class="feat-card fade-up">
+            <span class="feat-n">03</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>即時視覺化</h3>
+            <p>
+              圖表即時更新，滑鼠移過去就能看細節。不用等報表，開會直接投影。
+            </p>
+          </div>
+          <div class="feat-card fade-up">
+            <span class="feat-n">04</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>預測分析</h3>
+            <p>
+              LSTM 時序預測配上情境模擬，看得到未來 30
+              天的可能走向，以及最壞狀況在哪。
+            </p>
+          </div>
+          <div class="feat-card fade-up">
+            <span class="feat-n">05</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>中文自然查詢</h3>
+            <p>
+              用說話的方式問資料庫問題，系統自動轉成 SQL
+              並把結果畫出來。不需要會寫程式。
+            </p>
+          </div>
+          <div class="feat-card fade-up">
+            <span class="feat-n">06</span>
+            <div class="feat-icon">
+              <img
+                src="team3.png"
+                style="width: 28px; height: 28px; object-fit: contain"
+              />
+            </div>
+            <h3>報告產生器</h3>
+            <p>
+              一鍵輸出 PDF
+              或簡報格式，關鍵數字、圖表、結論自動排版，不用再花兩小時整理 PPT。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 數據統計 -->
+    <section id="stats">
+      <div class="wrap">
+        <h2 class="sec-heading">系統效能數字</h2>
+        <p class="sec-sub">實際測試與用戶回饋的結果</p>
+        <div class="circle-grid">
+          <div class="c-card fade-up">
+            <div class="c-ring">
+              <svg viewBox="0 0 110 110">
+                <circle class="cr-bg" cx="55" cy="55" r="50" />
+                <circle class="cr-fill cr-fill-1" cx="55" cy="55" r="50" />
+              </svg>
+              <div class="c-label">
+                <span class="c-num" style="color: var(--cyan)">92%</span>
+                <span class="c-unit">準確率</span>
+              </div>
+            </div>
+            <div class="c-title">預測準確率</div>
+            <div class="c-desc">
+              標準測試集結果，比業界基準高出約 15 個百分點
+            </div>
+          </div>
+          <div class="c-card fade-up">
+            <div class="c-ring">
+              <svg viewBox="0 0 110 110">
+                <circle class="cr-bg" cx="55" cy="55" r="50" />
+                <circle class="cr-fill cr-fill-2" cx="55" cy="55" r="50" />
+              </svg>
+              <div class="c-label">
+                <span class="c-num" style="color: var(--purple)">87%</span>
+                <span class="c-unit">採納率</span>
+              </div>
+            </div>
+            <div class="c-title">建議採納率</div>
+            <div class="c-desc">
+              真實業務場景中，AI 建議被決策者實際執行的比例
+            </div>
+          </div>
+          <div class="c-card fade-up">
+            <div class="c-ring">
+              <svg viewBox="0 0 110 110">
+                <circle class="cr-bg" cx="55" cy="55" r="50" />
+                <circle class="cr-fill cr-fill-3" cx="55" cy="55" r="50" />
+              </svg>
+              <div class="c-label">
+                <span class="c-num" style="color: var(--gold)">95%</span>
+                <span class="c-unit">滿意度</span>
+              </div>
+            </div>
+            <div class="c-title">使用者滿意度</div>
+            <div class="c-desc">
+              使用者訪談中表示「介面直覺不需要額外學習」的比例
+            </div>
+          </div>
+          <div class="c-card fade-up">
+            <div class="c-ring">
+              <svg viewBox="0 0 110 110">
+                <circle class="cr-bg" cx="55" cy="55" r="50" />
+                <circle class="cr-fill cr-fill-4" cx="55" cy="55" r="50" />
+              </svg>
+              <div class="c-label">
+                <span class="c-num" style="color: var(--pink)">78%</span>
+                <span class="c-unit">節省時間</span>
+              </div>
+            </div>
+            <div class="c-title">決策時間縮短</div>
+            <div class="c-desc">
+              導入系統前後的決策流程時間對比，平均縮短 78%
+            </div>
+          </div>
+        </div>
+        <div class="big-row">
+          <div class="big-item fade-up">
+            <div class="big-num">120萬+</div>
+            <div class="big-label">訓練資料筆數</div>
+          </div>
+          <div class="big-item fade-up">
+            <div class="big-num">0.3秒</div>
+            <div class="big-label">平均推論時間</div>
+          </div>
+          <div class="big-item fade-up">
+            <div class="big-num">99.9%</div>
+            <div class="big-label">系統可用率</div>
+          </div>
+          <div class="big-item fade-up">
+            <div class="big-num">6</div>
+            <div class="big-label">整合功能模組</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--成果展示 -->
+    <section id="showcase">
+      <div class="wrap">
+        <h2 class="sec-heading">我們做了什麼</h2>
+        <p class="sec-sub">五個實際跑過的子專題，每個都有可以展示的成果</p>
+        <div class="show-grid">
+          <div class="show-card wide fade-up">
+            <div class="show-thumb">
+              <div class="show-bg sbg-1"></div>
+              <div class="show-thumb-dots"></div>
+              <div class="show-icon">
+                <img
+                  src="team3.png"
+                  style="width: 44px; height: 44px; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="show-body">
+              <span class="show-tag st-ai">AI 決策</span>
+              <h3>零售銷售預測系統</h3>
+              <p>
+                串接 POS 歷史資料，用 LSTM 預測未來 30
+                天各品類銷售量。協助採購決策，庫存浪費減少 32%。
+              </p>
+              <div class="show-meta">
+                <span>📅 2026.05</span><span>LSTM · Python · Streamlit</span
+                ><span>準確率 92%</span>
+              </div>
+            </div>
+          </div>
+          <div class="show-card fade-up">
+            <div class="show-thumb">
+              <div class="show-bg sbg-2"></div>
+              <div class="show-thumb-dots"></div>
+              <div class="show-icon">
+                <img
+                  src="team3.png"
+                  style="width: 44px; height: 44px; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="show-body">
+              <span class="show-tag st-data">資料分析</span>
+              <h3>客戶流失預警</h3>
+              <p>
+                XGBoost 找出高風險客戶，搭配儀表板即時推播預警，召回率 88%。
+              </p>
+              <div class="show-meta"><span>XGBoost · Plotly</span></div>
+            </div>
+          </div>
+          <div class="show-card fade-up">
+            <div class="show-thumb">
+              <div class="show-bg sbg-3"></div>
+              <div class="show-thumb-dots"></div>
+              <div class="show-icon">
+                <img
+                  src="team3.png"
+                  style="width: 44px; height: 44px; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="show-body">
+              <span class="show-tag st-viz">文字分析</span>
+              <h3>社群輿情地圖</h3>
+              <p>爬 PTT/Dcard，BERT 跑情感分析，詞雲 + 趨勢圖即時更新。</p>
+              <div class="show-meta"><span>BERT · D3.js</span></div>
+            </div>
+          </div>
+          <div class="show-card fade-up">
+            <div class="show-thumb">
+              <div class="show-bg sbg-4"></div>
+              <div class="show-thumb-dots"></div>
+              <div class="show-icon">
+                <img
+                  src="team3.png"
+                  style="width: 44px; height: 44px; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="show-body">
+              <span class="show-tag st-ml">機器學習</span>
+              <h3>供應鏈風險評估</h3>
+              <p>Random Forest 量化斷鏈風險，可提前 14 天發出預警通知。</p>
+              <div class="show-meta"><span>Random Forest · Pandas</span></div>
+            </div>
+          </div>
+          <div class="show-card fade-up">
+            <div class="show-thumb">
+              <div class="show-bg sbg-5"></div>
+              <div class="show-thumb-dots"></div>
+              <div class="show-icon">
+                <img
+                  src="team3.png"
+                  style="width: 44px; height: 44px; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="show-body">
+              <span class="show-tag st-ai">NLP</span>
+              <h3>中文自然語言 BI</h3>
+              <p>用中文問問題，自動轉 SQL 查資料庫，結果直接畫圖。</p>
+              <div class="show-meta"><span>GPT · LangChain · SQL</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡 / 頁尾 -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-inner">
+          <h2 class="sec-heading">有問題找我們</h2>
+          <p class="sec-sub">合作提案、技術交流、課程說明，都歡迎留言</p>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="f-group">
+                <label for="name">姓名</label
+                ><input type="text" id="name" placeholder="你的名字" required />
+              </div>
+              <div class="f-group">
+                <label for="email">信箱</label
+                ><input
+                  type="email"
+                  id="email"
+                  placeholder="example@fu.edu.tw"
+                  required
+                />
+              </div>
+              <div class="f-group">
+                <label for="unit">單位</label
+                ><input type="text" id="unit" placeholder="學校 / 公司" />
+              </div>
+              <div class="f-group">
+                <label for="topic">主題</label>
+                <select id="topic">
+                  <option value="">請選擇</option>
+                  <option>功能詢問</option>
+                  <option>合作提案</option>
+                  <option>技術交流</option>
+                  <option>課程相關</option>
+                  <option>其他</option>
+                </select>
+              </div>
+              <div class="f-group span2">
+                <label for="msg">內容</label
+                ><textarea
+                  id="msg"
+                  placeholder="說說你的需求或問題..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="form-btn">送出</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div class="ft-brand">
+          <a href="#hero" class="logo" style="text-decoration: none">
+            <div class="logo-mark" style="animation: none">
+              <img
+                src="team3.png"
+                style="width: 20px; height: 20px; object-fit: contain"
+              />
+            </div>
+            <span class="logo-name">team3_final</span>
+          </a>
+          <p>智慧決策分析系統實作<br />輔仁大學 AI 專班 · 2026 年度期末專題</p>
+        </div>
+        <div class="ft-col">
+          <h4>系統功能</h4>
+          <ul>
+            <li><a href="#features">資料採集</a></li>
+            <li><a href="#features">AI 決策引擎</a></li>
+            <li><a href="#features">即時視覺化</a></li>
+            <li><a href="#features">預測分析</a></li>
+            <li><a href="#features">中文查詢</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>成果展示</h4>
+          <ul>
+            <li><a href="#showcase">銷售預測系統</a></li>
+            <li><a href="#showcase">客戶流失預警</a></li>
+            <li><a href="#showcase">輿情分析地圖</a></li>
+            <li><a href="#showcase">供應鏈風險評估</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>其他</h4>
+          <ul>
+            <li><a href="#contact">聯絡我們</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">技術文件</a></li>
+            <li><a href="#">課程說明</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span>© 2026 team3_final · 輔仁大學 AI 專班</span>
+        <div class="ft-socials">
+          <a class="ft-social" href="#"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a class="ft-social" href="#"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="ft-social" href="#"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 4 — 核心功能</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Courier New", monospace;
+        background: #0d1117;
+        color: #c9d1d9;
+        min-height: 100vh;
+        padding: 40px;
+      }
+
+      .header {
+        border-left: 4px solid #22c55e;
+        padding-left: 16px;
+        margin-bottom: 32px;
+      }
+      .header .sid {
+        font-size: 0.72rem;
+        color: #22c55e;
+        margin-bottom: 4px;
+      }
+      .header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        background: #21262d;
+        border: 1px solid #21262d;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+      .card {
+        background: #0d1117;
+        padding: 24px;
+        position: relative;
+      }
+      .card:hover {
+        background: #161b22;
+      }
+      .num {
+        font-size: 0.7rem;
+        color: #22c55e;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .card h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        font-family: "Segoe UI", sans-serif;
+        color: #f0f6fc;
+        margin-bottom: 8px;
+      }
+      .card p {
+        font-size: 0.8rem;
+        color: #8b949e;
+        line-height: 1.65;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .top-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #22c55e;
+        opacity: 0;
+      }
+      .card:hover .top-line {
+        opacity: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>六個功能模組</h1>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">01</div>
+        <h3>資料採集</h3>
+        <p>
+          接 API、爬蟲、資料庫都行。進來的資料自動格式化，省掉你手動整理的時間。
+        </p>
+      </div>
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">02</div>
+        <h3>AI 決策引擎</h3>
+        <p>
+          模型跑完不是給你一堆數字，而是直接給建議、給信心區間，讓你知道該往哪個方向走。
+        </p>
+      </div>
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">03</div>
+        <h3>即時視覺化</h3>
+        <p>圖表即時更新，滑鼠移過去就能看細節。不用等報表，開會直接投影。</p>
+      </div>
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">04</div>
+        <h3>預測分析</h3>
+        <p>
+          LSTM 時序預測配上情境模擬，看得到未來 30
+          天的可能走向，以及最壞狀況在哪。
+        </p>
+      </div>
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">05</div>
+        <h3>中文自然查詢</h3>
+        <p>
+          用說話的方式問資料庫問題，系統自動轉成 SQL
+          並把結果畫出來。不需要會寫程式。
+        </p>
+      </div>
+      <div class="card">
+        <div class="top-line"></div>
+        <div class="num">06</div>
+        <h3>報告產生器</h3>
+        <p>
+          一鍵輸出 PDF
+          或簡報格式，關鍵數字、圖表、結論自動排版，不用再花兩小時整理 PPT。
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

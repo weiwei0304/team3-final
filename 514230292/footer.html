@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer — 頁尾</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f5f5f0;
+        color: #1c1917;
+        min-height: 100vh;
+        padding: 36px;
+      }
+
+      .footer-box {
+        background: #fff;
+        border: 1px solid #d6d3d1;
+        border-radius: 10px;
+        padding: 24px;
+      }
+      .footer-box h2 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e7e5e4;
+      }
+      .ft-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .ft-brand .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .ft-brand .mark {
+        width: 26px;
+        height: 26px;
+        background: #1c1917;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: #fff;
+      }
+      .ft-brand .name {
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+      .ft-brand p {
+        font-size: 0.78rem;
+        color: #78716c;
+        line-height: 1.7;
+      }
+      .ft-col h4 {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #78716c;
+        margin-bottom: 8px;
+      }
+      .ft-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .ft-col a {
+        font-size: 0.82rem;
+        color: #57534e;
+        text-decoration: none;
+      }
+      .ft-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 14px;
+        border-top: 1px solid #e7e5e4;
+      }
+      .ft-bottom span {
+        font-size: 0.78rem;
+        color: #78716c;
+      }
+      .ft-socials {
+        display: flex;
+        gap: 6px;
+      }
+      .ft-social {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: #f5f5f0;
+        border: 1px solid #d6d3d1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: #78716c;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer-box">
+      <h2>頁尾</h2>
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <div class="logo">
+            <div class="mark">✦</div>
+            <span class="name">team3_final</span>
+          </div>
+          <p>
+            智慧決策分析系統實作<br />輔仁大學 AI 專班 · 2026 年度期末專題
+          </p>
+        </div>
+        <div class="ft-col">
+          <h4>系統功能</h4>
+          <ul>
+            <li><a href="#">資料採集</a></li>
+            <li><a href="#">AI 決策引擎</a></li>
+            <li><a href="#">即時視覺化</a></li>
+            <li><a href="#">預測分析</a></li>
+            <li><a href="#">中文查詢</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>其他</h4>
+          <ul>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">技術文件</a></li>
+            <li><a href="#">課程說明</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <span>© 2026 team3_final · 輔仁大學 AI 專班</span>
+        <div class="ft-socials">
+          <a class="ft-social" href="#">⌥</a>
+          <a class="ft-social" href="#">in</a>
+          <a class="ft-social" href="#">✉</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

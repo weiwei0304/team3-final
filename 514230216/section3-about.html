@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 3 — 關於系統</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #1c1a17;
+        color: #e8dcc8;
+        min-height: 100vh;
+        padding: 36px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 28px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #2e2a24;
+      }
+      .top h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .left {
+        background: #24211d;
+        border: 1px solid #3a3530;
+        border-radius: 10px;
+        padding: 28px;
+      }
+      .left h2 {
+        font-size: 1.45rem;
+        font-weight: 800;
+        line-height: 1.3;
+        color: #fef3c7;
+        margin-bottom: 14px;
+      }
+      .left h2 span {
+        color: #f97316;
+      }
+      .left p {
+        font-size: 0.88rem;
+        color: #a8996a;
+        line-height: 1.8;
+        margin-bottom: 12px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .chip {
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: #2e2a24;
+        border: 1px solid #3a3530;
+        color: #e8dcc8;
+      }
+      .chip.hot {
+        border-color: #f97316;
+        color: #f97316;
+        background: rgba(249, 115, 22, 0.08);
+      }
+
+      .right {
+        background: #24211d;
+        border: 1px solid #3a3530;
+        border-radius: 10px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .right-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #f97316;
+        margin-bottom: 4px;
+      }
+      .flow-item {
+        background: #1c1a17;
+        border: 1px solid #3a3530;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 0.82rem;
+        color: #d6c8b4;
+      }
+      .flow-item.accent {
+        border-color: #f97316;
+        color: #f97316;
+      }
+      .arrow {
+        text-align: center;
+        color: #78716c;
+        font-size: 0.85rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>關於系統</h1>
+    </div>
+
+    <div class="layout">
+      <div class="left">
+        <h2>這個系統<br />在解決<span>什麼問題</span>？</h2>
+        <p>
+          企業每天產生大量資料，但真正能幫助決策的資訊往往埋在裡面找不到。傳統分析太慢，手動報表又容易出錯，等到數字出來，時機可能已經過了。
+        </p>
+        <p>
+          COSMOS AI
+          把資料蒐集、清洗、建模、視覺化整合成一個流程，讓你不需要是資料科學家，也能看懂
+          AI 在說什麼。
+        </p>
+        <div class="chips">
+          <span class="chip hot">機器學習</span>
+          <span class="chip hot">深度學習</span>
+          <span class="chip">自然語言處理</span>
+          <span class="chip">時序預測</span>
+          <span class="chip">資料視覺化</span>
+          <span class="chip">決策支援</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-label">系統流程</div>
+        <div class="flow-item">資料來源（API / 資料庫 / CSV）</div>
+        <div class="arrow">↓</div>
+        <div class="flow-item accent">資料清洗 &amp; 特徵工程</div>
+        <div class="arrow">↓</div>
+        <div class="flow-item">模型訓練（ML / DL）</div>
+        <div class="arrow">↓</div>
+        <div class="flow-item accent">決策建議 &amp; 視覺化報告</div>
+      </div>
+    </div>
+  </body>
+</html>

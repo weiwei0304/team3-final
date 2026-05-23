@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 7 — 聯絡 / 頁尾</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f5f5f0;
+        color: #1c1917;
+        min-height: 100vh;
+        padding: 36px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 28px;
+        padding-bottom: 14px;
+        border-bottom: 2px solid #d6d3d1;
+      }
+      .top h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .contact-box {
+        background: #fff;
+        border: 1px solid #d6d3d1;
+        border-radius: 10px;
+        padding: 24px;
+      }
+      .contact-box h2 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+      .contact-box .sub {
+        font-size: 0.82rem;
+        color: #78716c;
+        margin-bottom: 20px;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .f-g {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .f-g.full {
+        grid-column: span 2;
+      }
+      .f-g label {
+        font-size: 0.78rem;
+        color: #78716c;
+      }
+      .f-g input,
+      .f-g textarea,
+      .f-g select {
+        background: #fafaf9;
+        border: 1px solid #d6d3d1;
+        border-radius: 6px;
+        padding: 9px 12px;
+        color: #1c1917;
+        font-family: inherit;
+        font-size: 0.88rem;
+        outline: none;
+        -webkit-appearance: none;
+      }
+      .f-g input:focus,
+      .f-g textarea:focus,
+      .f-g select:focus {
+        border-color: #44403c;
+      }
+      .f-g textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+      .f-g select option {
+        background: #fff;
+      }
+      .submit-btn {
+        width: 100%;
+        margin-top: 12px;
+        padding: 11px;
+        border-radius: 6px;
+        background: #1c1917;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: none;
+        cursor: pointer;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>聯絡</h1>
+    </div>
+
+    <div class="two-col">
+      <div class="contact-box">
+        <h2>有問題找我們</h2>
+        <p class="sub">合作提案、技術交流、課程說明，都歡迎留言</p>
+        <div class="form-row">
+          <div class="f-g">
+            <label>姓名</label><input type="text" placeholder="你的名字" />
+          </div>
+          <div class="f-g">
+            <label>信箱</label
+            ><input type="email" placeholder="example@fu.edu.tw" />
+          </div>
+          <div class="f-g">
+            <label>單位</label><input type="text" placeholder="學校 / 公司" />
+          </div>
+          <div class="f-g">
+            <label>主題</label>
+            <select>
+              <option value="">請選擇</option>
+              <option>功能詢問</option>
+              <option>合作提案</option>
+              <option>技術交流</option>
+              <option>課程相關</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div class="f-g full">
+            <label>內容</label
+            ><textarea placeholder="說說你的需求或問題..."></textarea>
+          </div>
+        </div>
+        <button class="submit-btn" type="button">送出</button>
+      </div>
+    </div>
+  </body>
+</html>
